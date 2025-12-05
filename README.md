@@ -45,3 +45,9 @@ python src\consumer_db.py
 # Run dashboard
 streamlit run src\dashboard_realtime.py
 
+CREATE TABLE crypto_realtime_prices (
+    id SERIAL PRIMARY KEY,
+    symbol VARCHAR(20),
+    price NUMERIC(18,8),
+    ts TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
